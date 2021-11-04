@@ -53,4 +53,3 @@
 ![image](https://user-images.githubusercontent.com/84692769/140297959-753f67ad-cb3c-4c28-8e0f-1489f813a4d1.png)
 
 ##### 2-3) 서버가 등록된 것을 확인한다.
-##### 2-4) http://
