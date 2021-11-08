@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="reg.css">
+</head>
+<body>
+	
+	<form action="Reg" method="post">
+		<table border="1">
+			<tr>
+				<td colspan="2">회원가입</td>
+			</tr>
+			<tr>
+				<td>이름 </td>
+				<td> <input name="name"> </td>
+			</tr>
+			<tr>
+				<td>ID </td>
+				<td> <input name="id"> </td>
+			</tr>
+			<tr>
+				<td>PW </td>
+				<td> 
+					<input type="password" name="pw"> 
+				</td>
+			</tr>
+			<tr>
+				<td>성별 </td>
+				<td> 
+					<input type="radio" name="gender" value="남">남 
+					<input type="radio" name="gender" value="여">여 
+				</td>
+			</tr>
+			<tr>
+				<td>주소 </td>
+				<td> 
+					<select name="address">
+						<option selected="selected" value="대구"> 대구
+						<option value="제주"> 제주
+						<option value="서울"> 서울
+						<option value="부산"> 부산
+					</select> 
+				</td>
+			</tr>
+			<tr>
+				<td>관심사 </td>
+				<td> 
+					<input type="checkbox" name="hobby" value="서핑"> 서핑
+					<input type="checkbox" name="hobby" value="독서"> 독서
+					<input type="checkbox" name="hobby" value="운동"> 운동
+					<input type="checkbox" name="hobby" value="개발"> 개발 
+				</td>
+			</tr>
+			<tr>
+				<td>자기소개 </td>
+				<td> <textarea name="intro"></textarea> </td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="가입!">
+					<input type="reset" value="초기화">
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>
