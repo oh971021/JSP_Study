@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Danwi Calc</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="wrap">
+		<form action="calc.jsp">
+			<table border="0">
+				<tr class="header">
+					<td><h1>단위 변환</h1></td>
+				</tr>
+				<tr>
+					<td><h2>변환할 값 : </h2></td>
+				</tr>
+				<tr>
+					<td> <input name="value" placeholder="숫자를 입력하세요!"> </td>
+				</tr>
+				<tr>
+					<td><h2>단위 : </h2></td>
+				</tr>
+				<tr>
+					<td>
+						<select name="calc">
+							<option value="1"> cm -> inch </option>
+							<option value="2"> ㎡ -> 평 </option>
+							<option value="3"> ℃ -> ℉ </option>
+							<option value="4"> km/h -> ml/h </option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<button><h2>변환</h2></button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>
