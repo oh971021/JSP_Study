@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>File Upload</title>
+</head>
+<body>
+<!-- 
+
+	form 안에 입력한 데이터를 실어 보내야 함.
+	톰캣이 알아서 인코딩(글자만)
+	톰캣이 알아서 디코딩(글자만)
+
+	기존의 톰캣 방식(비닐포장) (인코딩으로는 파일처리가 안됨)
+	그래서 다른방식(박스포장) 인코딩 필요 (.jar 필요함)
+								-> 남이 만들어 놓은거 가져다 쓰자
+								
+	http://www.servlets.com (.jar 다운받는 곳)
+		: 공식 사이트는 아님, Oreilly 라는 출판사가 운영하는 사이트
+	
+	WEB-INF
+		: 1. 다이나믹 웹 프로젝트에서 환경 설정 폴더가 된다.
+		: 2. Jar 파일을 넣어준다.
+
+	form 
+		1. action = 전송 목적지 (url)
+		2. method = get, post
+		3. enctype = 
+			: application/... (비닐 포장) : 기존의 톰캣 인코딩 방식
+			: multipart/form-data (박스 포장) : 다른 방식의 인코딩
+	
+	File Upload 하는 경우 HTML에서 신경 쓸 것 단 2개
+		1. POST 방식 (파일을 get방식으로 보낼 수 없음. 주소에 실리지 않아서)
+		2. enctype 을 "multipart/form-data"로 바꿔야 함. (포장방식을 박스포장으로 바꿔야 함)
+	
+ -->
+ 
+ 	<form action="FileUpload" method="post" enctype="multipart/form-data">
+  		이름 : <input name="n"> <p>
+  		사진 <input name="f" type="file"> <p>
+  		기타 <input name="e" type="file"> <p>
+  		<button>전송</button>	
+ 	</form>
+ 
+</body>
+</html>
