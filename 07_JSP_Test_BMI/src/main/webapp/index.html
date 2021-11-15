@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<script type="text/javascript">
+	function block() {
+		// 값 받기
+		let name = document.getElementById('name');
+		let height = document.getElementById('height');
+		let weight = document.getElementById('weight');
+		let profile = document.getElementById('profile');
+		
+		// name 값 유효성 검사
+		if (name.value == "") {
+			alert("이름을 입력하세요!");
+			name.focus();
+			return false;
+		} else if (name.value.length < 2) {
+			alert("이름은 두자리 이상 입력하세요!");
+			name.focus();
+			return false;
+		}
+		
+		// height 값 유효성 검사
+		if (height.value == "") {
+			alert("키를 입력하세요!")
+			height.focus();
+			height.value = "";
+			return false;
+		} else if (isNaN(height.value)) {
+			alert("키는 숫자를 입력하세요!")
+			height.focus();
+			height.value = "";
+			return false;
+		} else if (height.value.length < 3) {
+			alert("키는 세자리 이상 입력하세요!")
+			height.focus();
+			height.value = "";
+			return false;
+		} 
+		
+		// weight 값 유효성 검사
+		if (weight.value == "") {
+			alert("몸무게를 입력하세요!")
+			weight.focus();
+			weight.value = "";
+			return false;
+		} else if (isNaN(weight.value)) {
+			alert("몸무게는 숫자를 입력하세요!")
+			weight.focus();
+			weight.value = "";
+			return false;
+		} else if (weight.value.length < 2) {
+			alert("몸무게는 두자리 이상 입력하세요!")
+			weight.focus();
+			weight.value = "";
+			return false;
+		} 
+		
+		return true;
+	}
+</script>
+<body>
+	<form action="result.jsp" onsubmit="return block();" method="post" enctype="multipart/form-data" >
+		<table border="0">
+			<tr>
+				<td colspan="2" id="title">BMI 검사</td>
+			</tr>
+			<!-- 제목 -->
+			
+			<tr>
+				<td>이름</td>
+				<td> <input type="text" id="name" name="name" placeholder="이름을 입력하세요!" maxlength="20" > </td>
+			</tr>
+			<tr>
+				<td>키</td>
+				<td> <input type="text" id="height" name="height" placeholder="키를 입력하세요!" maxlength="3" > </td>
+			</tr>
+			<tr>
+				<td>체중</td>
+				<td> <input type="text" id="weight" name="weight" placeholder="몸무게를 입력하세요!" maxlength="3" > </td>
+			</tr>
+			<tr>
+				<td>사진</td>
+				<td> <input type="file" name="profile" > </td>
+			</tr>
+			<!-- 레이아웃 -->
+			
+			<tr>
+				<td colspan="2" id="button"><button>계산</button></td>
+			</tr>
+			<!-- 결과보기 -->
+			
+		</table>
+	</form>
+</body>
+</html>
