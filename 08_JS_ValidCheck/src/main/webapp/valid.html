@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="check.js"></script>
+<script type="text/javascript" src="validCheck.js"></script>
+</head>
+<script type="text/javascript">
+	function test() {
+		let a = '';
+		if (a) {
+			alert('참');
+		} else {
+			alert('거짓');
+		}
+	}
+</script>
+<body>
+
+	<button onclick="test();">인생은 참과 거짓..</button>
+
+	<h1>회원가입</h1>
+	
+	<form action="asd" name="myForm" onsubmit="return call()">
+		필수 입력 : <input name="i1" placeholder="필수입력, 3글자 이상, 한긅x" required="required"> <p>
+		글자 수 : <input name="i2" placeholder="3자 이상, 10글자 까지" maxlength="10" required="required">
+		<hr>
+		비번 : <input name="i3" placeholder="5글자 이상, 대문자, 숫자 포함" required="required"> <p>
+		비번 확인 : <input name="i4" placeholder="비번 일치" required="required"> <p>
+		
+		숫자 : <input name="i5" placeholder="숫자만, 공백x" type="number" required="required"> <p> <p>
+		<button> 가입 </button>
+		<input type="reset">
+	</form>
+</body>
+</html>
