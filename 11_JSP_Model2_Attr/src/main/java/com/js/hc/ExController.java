@@ -12,6 +12,7 @@ public class ExController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		Exchange.MakeRightValue(request);
 		request.getRequestDispatcher("output3.jsp").forward(request, response);
 		
 	}

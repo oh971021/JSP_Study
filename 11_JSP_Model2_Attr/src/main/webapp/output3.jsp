@@ -6,14 +6,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<%    
-    request.setCharacterEncoding("UTF-8");
-    String how = request.getParameter("how");
-%>
 <body>
 	<table>
 		<tr>
-			<td> <%=how %> 원 부족합니다. </td>
+			<td> <%=request.getParameter("how") %> 원 부족합니다. </td>
+		</tr>
+		<tr>
+			<td> <%=request.getAttribute("how") %> 원 부족합니다. </td>
 		</tr>
 	</table>
 </body>

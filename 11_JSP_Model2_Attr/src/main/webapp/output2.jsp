@@ -31,7 +31,8 @@
 	2. 잔돈 안내  -->
 
 	<% if (r.getPrice() > r.getMoney()) { 
-		int how = r.getPrice() - r.getMoney();
+		// int how = r.getPrice() - r.getMoney();
+		int how = (Integer)request.getAttribute("ex2");
 	%>
 		<a href="output3.jsp?how=<%=how %>">
 			<button>얼마 모자른데요? (a tag : get)</button>
@@ -48,8 +49,12 @@
 			<button name="how" value="<%=how %>">얼마 모자른데요? ( form : post )</button>
 		</form> <p>
 		
-		<form action="ExController">
+		<form action="ExController" method="post">
 			<button name="how" value="<%=how %>">얼마 모자른데요? ( form.MVC : post )</button>			
+		</form>
+		
+		<form action="ExController">
+			<button name="how" value="<%=r.getExchange() %>">얼마 모자른데요? ( form.MVC2 : post )</button>			
 		</form>
 		
 	<% } %>
