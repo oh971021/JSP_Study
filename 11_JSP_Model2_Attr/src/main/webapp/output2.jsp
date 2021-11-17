@@ -25,5 +25,33 @@
 			<td> 멘트 : <%=r.getSay() %> </td>
 		</tr>
 	</table>
+	
+<!-- 버튼을 눌렀을 때 output3.jps
+	1. 돈이 모자를때만 나오게
+	2. 잔돈 안내  -->
+
+	<% if (r.getPrice() > r.getMoney()) { 
+		int how = r.getPrice() - r.getMoney();
+	%>
+		<a href="output3.jsp?how=<%=how %>">
+			<button>얼마 모자른데요? (a tag : get)</button>
+		</a>	<p>
+		
+		<button onclick="location.href='output3.jsp?how=<%=how %>'">얼마 모자른데요? (onclick : get)</button> <p>
+		
+		<form action="output3.jsp" method="post">
+			<input name="how" type="hidden" value="<%=how %>">
+			<button>얼마 모자른데요? ( form : post )</button>
+		</form> <p>
+		
+		<form action="output3.jsp" method="post">
+			<button name="how" value="<%=how %>">얼마 모자른데요? ( form : post )</button>
+		</form> <p>
+		
+		<form action="ExController">
+			<button name="how" value="<%=how %>">얼마 모자른데요? ( form.MVC : post )</button>			
+		</form>
+		
+	<% } %>
 </body>
 </html>
