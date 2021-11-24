@@ -9,11 +9,14 @@
 <body>
 	<table>
 		<tr>
-			<td> ${how } 원 부족합니다. </td>
+			<td> ${param.how } 원 부족합니다. </td>
 		</tr>
 		<tr>
 			<td> ${how2 } 원 부족합니다. </td>
 		</tr>
 	</table>
+	
+	<a href="TestC"> test Request </a>
+	
 </body>
 </html>
