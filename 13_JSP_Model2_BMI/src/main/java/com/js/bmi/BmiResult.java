@@ -5,13 +5,13 @@ public class BmiResult {
 	private String name;
 	private double height;
 	private double weight;
-	private double bmi;
+	private String bmi;
 	private String result;
 	private String profile;
 	
 	public BmiResult() {}
 
-	public BmiResult(String name, double height, double weight, double bmi, String result, String profile) {
+	public BmiResult(String name, double height, double weight, String bmi, String result, String profile) {
 		super();
 		this.name = name;
 		this.height = height;
@@ -45,11 +45,11 @@ public class BmiResult {
 		this.weight = weight;
 	}
 
-	public double getBmi() {
+	public String getBmi() {
 		return bmi;
 	}
 
-	public void setBmi(double bmi) {
+	public void setBmi(String bmi) {
 		this.bmi = bmi;
 	}
 

@@ -16,7 +16,7 @@
 <%
 	// 멀티파트 셋팅
 	String path = request.getSession().getServletContext().getRealPath("img");
-	// System.out.println(path);
+	System.out.println(path);
 	
 	// 멀티파트 객체 생성
 	MultipartRequest mr = new MultipartRequest(request, path, 30 * 1024 * 1024, "utf-8", new DefaultFileRenamePolicy());	

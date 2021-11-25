@@ -41,7 +41,9 @@ public class BmiCalc {
 			result = "°úÃ¼Áß";
 		}
 		
-		BmiResult br = new BmiResult(name, height, weight, bmi, result, profile);
+		String bmi2 = String.format("%.2f", bmi);
+		
+		BmiResult br = new BmiResult(name, height, weight, bmi2, result, profile);
 		
 		request.setAttribute("br", br);
 		
