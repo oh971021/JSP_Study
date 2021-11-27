@@ -39,7 +39,7 @@
 
 ![Tomcat 셋팅](https://user-images.githubusercontent.com/84692769/140296974-025ac029-260d-42a7-ba82-809c651565c7.jpg)
 
-##### 2) 하단의 Servers 탭을 클릭 한 뒤 New - Server 로 이동
+##### 2) 하단의 Servers 탭을 클릭 한 뒤 New - Server 로 이동한다.
 
 ![image](https://user-images.githubusercontent.com/84692769/140297245-0ff6a7b6-df85-465f-9552-15677bf2be2b.png)
 
