@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<h1>First!!</h1>
+	<h1>First</h1>
 	
 	<a href="SecondC">(a 태그) SecondC로 get방식 요청</a>
 	<hr>
